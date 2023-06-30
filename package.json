@@ -1,20 +1,36 @@
 {
   "name": "2708-node-lib-md",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Busca requisições Http através das Urls, caso não estejam validas retorna o erro 404 Not found.",
+  "main": "./cli.js",
+  "bin": {
+    "LibNodeJs": "./cli.js",
+    "preferGlobal": true
+  },
+  "type": "module",
+  "keywords": ["url", "markdown"],
+  "homepage": "git@github.com:brunoidalgo/LibNodeJs.git",
+  "bugs": {
+    "email" : "idalgob99@gmail.com"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node ./src/cli.js ./arquivos/texto.md",
+    "cli:valida": "node ./src/cli.js ./arquivos/texto.md --valida"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alura-cursos/2708-node-lib-md.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bruno Idalgo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alura-cursos/2708-node-lib-md/issues"
   },
-  "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme"
+  "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme",
+  "dependencies": {
+    "chalk": "5.0.1"
+  }
+  
 }
